@@ -1,0 +1,33 @@
+{
+  "titulo": "E se o áudio da sua MÃE for falso?",
+  "capa": "E SE O ÁUDIO DA SUA\n*MÃE* FOR FALSO?",
+  "estilo": "redondo",
+  "fps": 60,
+  "efeitos": {"abaixa": true},
+  "personagem": {"tipo": "menina", "roupa": "moletom", "cores": {"moletom": "#facc15", "punho": "#111827", "calca": "#111827", "mochila": "#facc15", "tenis": "#f4f1ea", "cabelo": "#1f1a17"}},
+  "lugar": "cozinha",
+  "hora": "noite",
+  "voz": {"motor": "elevenlabs", "id": "IYSWsktXvPfMJJ7GKBNY", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"},
+  "alvoPpm": 190,
+  "frases": [
+    {"texto": "O áudio da sua mãe pedindo Pix pode ser falso?", "plano": "gancho", "gancho": true},
+    {"texto": "Dez da noite. Chega um áudio dela.", "plano": "noite"},
+    {"texto": "\"Oi, filho. Preciso pagar uma conta. Me manda um Pix urgente?\"", "plano": "audio"},
+    {"texto": "A voz é dela. Você abre o app e digita o valor...", "plano": "app"},
+    {"texto": "PARA TUDO! Essa voz não é da sua mãe.", "plano": "para_tudo"},
+    {"texto": "É uma cópia feita por inteligência artificial.", "plano": "copia"},
+    {"texto": "Às vezes bastam três segundos de um vídeo que ela postou.", "plano": "tres_seg"},
+    {"texto": "A IA imita o som igual papagaio, mas não sabe nada da vida de vocês.", "plano": "papagaio"},
+    {"texto": "Pista um: a *pressa*. É urgente pra você não pensar.", "plano": "pista1"},
+    {"texto": "Pista dois: o *nome*. O Pix vai pra um desconhecido.", "plano": "pista2"},
+    {"texto": "Pista três: você *não consegue ligar*. \"Tô sem bateria, só manda.\"", "plano": "pista3"},
+    {"texto": "Então você desliga e liga você mesmo pro número de sempre dela.", "plano": "liga", "jogo": "corrige"},
+    {"texto": "Mas e se ela não atender?", "plano": "nao_atende", "jogo": "falha"},
+    {"texto": "Então vocês combinam antes uma palavra que só a família sabe.", "plano": "palavra", "jogo": "corrige"},
+    {"texto": "Essa é a *palavra de segurança*. O papagaio não sabe.", "plano": "palavra_rotulo"},
+    {"texto": "A voz até pode ser dela. O pedido, não.", "plano": "regra"},
+    {"texto": "Se você vai combinar a sua hoje, comenta *COMBINADO*.", "plano": "comenta"}
+  ],
+  "cauda": {"segundos": 1.6, "plano": "cartao"},
+  "trilha": {"arquivo": "trilha", "ganho": 0.16}
+}

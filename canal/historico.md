@@ -15,3 +15,4 @@
 - 24/11/2026 · voz-clonada · Colou a transcrição do vídeo de referência e pediu seguir os parâmetros → roteiro refeito (~50 s, 1º quadro com o rosto da detetive em choque e o título, sem "segue" no meio, fim com comentário de uma palavra "COMBINADO", título "E se o áudio da sua MÃE for falso?") e regras de capa, título, descrição, uso de IA, horário fixo e conferência de 48 h salvas no canal.
 - 24/11/2026 · voz-clonada · Revisou o texto: "Me manda um Pix urgente?" (sem vírgula) e "PARA TUDO!" com leve tremida na tela → ajustado no roteiro.
 - 24/11/2026 · voz-clonada · Aprovou o roteiro ("segue") e escolheu postar sempre às 12h → horário salvo no canal; começando roteiro.json e cena.js.
+- 24/11/2026 · voz-clonada · Pediu pausa no meio da produção → roteiro.json e cena.js escritos (rascunho, ainda sem prévias), guardados no GitHub; aguardando ele mandar continuar.
