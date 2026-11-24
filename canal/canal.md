@@ -25,7 +25,7 @@ alívio na hora de se proteger. Nunca culpar a vítima: golpe pega gente esperta
 **Evitar:** ensinar a aplicar o golpe (só a se defender), citar nome ou logo de banco, app ou loja real, dar número de
 telefone ou site, sensacionalismo e cena pesada.
 
-**Voz principal de todos os vídeos:** Bia, da ElevenLabs. Configuração em `identidade.md`.
+**Voz principal de todos os vídeos:** Voz feminina natural (sua, na ElevenLabs). Configuração em `identidade.md`.
 
 ## Estilo do vídeo
 

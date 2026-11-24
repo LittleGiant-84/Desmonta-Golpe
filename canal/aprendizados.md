@@ -27,7 +27,7 @@
 
 ## Voz e som
 
-- Bia, da ElevenLabs, é a voz de todos os vídeos; voz do computador só para testes (você escolheu, 24/11/2026).
+- A Voz feminina natural (das suas vozes na ElevenLabs, ID `IYSWsktXvPfMJJ7GKBNY`) é a voz de todos os vídeos; voz do computador só para testes (você pediu, 24/11/2026; trocou a Bia).
 
 ## Capa e texto de postar
 

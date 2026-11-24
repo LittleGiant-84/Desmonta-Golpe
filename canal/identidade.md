@@ -39,8 +39,8 @@ a explica. Telas de celular são desenhadas pela cena (sem logo nem nome de app 
 
 ## Voz
 
-Feminina, brasileira, séria mas próxima, como uma amiga avisando. O padrão de todos os vídeos é **Bia**, da
-ElevenLabs (ID `Eyspt3SYhZzXd1Jd3J8O`, escolhida em 24/11/2026 entre Raquel, Ana Dias e Bia). Também em
+Feminina, brasileira, séria mas próxima, como uma amiga avisando. O padrão de todos os vídeos é a **Voz feminina
+natural** das suas vozes na ElevenLabs (ID `IYSWsktXvPfMJJ7GKBNY`, escolhida em 24/11/2026; substitui a Bia). Também em
 `canal/voz.json`, que o motor carrega sozinho. A voz do computador (Microsoft Maria) fica só para testes com
 `--voz-teste`.
 
@@ -62,5 +62,5 @@ Coloque o logo do canal em `canal/logo.png` (quadrado). Ele aparece no fim de to
 "personagem": {"tipo": "menina", "roupa": "moletom", "cores": {"moletom": "#facc15", "punho": "#111827", "calca": "#111827", "mochila": "#facc15", "tenis": "#f4f1ea", "cabelo": "#1f1a17"}},
 "lugar": "cozinha",
 "hora": "noite",
-"voz": {"motor": "elevenlabs", "id": "Eyspt3SYhZzXd1Jd3J8O", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"}
+"voz": {"motor": "elevenlabs", "id": "IYSWsktXvPfMJJ7GKBNY", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"}
 ```

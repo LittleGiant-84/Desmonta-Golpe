@@ -8,3 +8,4 @@
 - 23/11/2026 · canal · Pediu análise de nichos e escolheu abrir um canal dark de golpes e segurança digital, animado (estudo no projeto O Mundo da Tecnologia, `canal/estudos/novos-canais-2026-11.md`).
 - 24/11/2026 · canal · Aprovou o nome Desmonta Golpe, a detetive de moletom amarelo e preto e a cozinha à noite; pediu conferir o @ no TikTok e no Instagram; criou o repositório Desmonta-Golpe → projeto montado a partir da Fábrica Cartoon (motor, método e lições técnicas), canal configurado e 3 amostras de voz feminina baixadas pra escolher.
 - 24/11/2026 · canal · Escolheu a voz Bia (feminina, direta e segura) → adicionada à conta da ElevenLabs e salva como voz padrão do canal.
+- 24/11/2026 · canal · Pediu trocar a voz padrão pela "Voz feminina natural" das vozes dele na ElevenLabs → voz conferida na conta e salva como padrão no lugar da Bia.
