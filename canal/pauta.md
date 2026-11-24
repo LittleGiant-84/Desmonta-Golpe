@@ -15,7 +15,7 @@
 
 | Tema | Pergunta curiosa (gancho) | Roteiro | Vídeo | Postado | Resultado |
 |---|---|---|---|---|---|
-| Voz clonada por IA | O áudio da sua mãe pedindo Pix pode ser falso? | 📝 | ⬜ | ⬜ | Estreia. Pasta `videos/voz-clonada/` |
+| Voz clonada por IA | E se o áudio da sua MÃE for falso? | 📝 | ⬜ | ⬜ | Estreia. Pasta `videos/voz-clonada/` |
 | Filho com número novo | Por que gente esperta cai no golpe do "troquei de número"? | ⬜ | ⬜ | ⬜ | |
 | Código de 6 dígitos | Como 6 números entregam o seu WhatsApp inteiro? | ⬜ | ⬜ | ⬜ | |
 | Falsa central do banco | O que o banco de verdade NUNCA pede no telefone? | ⬜ | ⬜ | ⬜ | |

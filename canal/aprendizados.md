@@ -17,6 +17,7 @@
 ## Roteiro e narração
 
 - Ensinar a se defender, nunca a aplicar o golpe. Sem nome nem logo de banco, app ou loja real (canal criado, 24/11/2026).
+- Vídeo curto pra ser visto até o fim (~50 s). Sem pedir "segue" no meio. No fim, pedir um comentário de UMA palavra ligada ao caso (ex.: "comenta COMBINADO"), sem copiar a palavra de outro canal (vídeo de referência do usuário, 24/11/2026).
 
 ## Visual (personagem, cena, câmera)
 
@@ -24,6 +25,7 @@
   movimento; ambientar laterais e fundo, sem vazios brancos (vindo do projeto anterior, 10 e 12/11/2026).
 - Câmera contínua atravessando falas, poucos cortes, peças reagindo na palavra que as explica (vindo do projeto
   anterior, 11/11/2026; guia em `referencias/dinamica/guia.md`).
+- O 1º quadro é a capa no feed: abrir com o rosto da detetive enchendo a tela, já reagindo, com o título em 2 linhas em cima. Nada de plano aberto sem rosto no começo (vídeo de referência do usuário, 24/11/2026).
 
 ## Voz e som
 
@@ -31,11 +33,13 @@
 
 ## Capa e texto de postar
 
-- (nada ainda)
+- Capa em série, igual em todos: fundo amarelo e preto, 2 linhas de texto e a detetive em choque; subir no campo Miniatura do YouTube Studio pelo computador (vídeo de referência, 24/11/2026).
+- Título até 50 caracteres, começando com "E se", quem e a ideia, com uma palavra em MAIÚSCULA; nenhuma hashtag no título (vídeo de referência, 24/11/2026).
+- Descrição curta (uma linha com o que a pessoa buscaria), sem hashtag e sem tags; preencher o vídeo relacionado quando houver um vídeo longo; marcar "sim" em uso de IA (voz realista feita com IA); programar sempre no mesmo horário (vídeo de referência, 24/11/2026).
 
 ## O que dá resultado nas redes
 
-- (nada ainda)
+- Conferir 48 h depois: quantos continuaram assistindo (meta 75%), duração média perto da duração do vídeo e o segundo em que a curva cai. Não apagar Short que travou: quando um estoura, puxa os antigos (vídeo de referência, 24/11/2026).
 
 ## Lições técnicas
 

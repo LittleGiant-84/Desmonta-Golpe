@@ -5,7 +5,7 @@
 
 **Nome do canal:** Desmonta Golpe
 **@ nas redes:** @desmontagolpe (livre no TikTok e no Instagram, conferido pelo usuário em 24/11/2026)
-**Assinatura do fim do vídeo:** Qual golpe já tentaram em você?
+**Assinatura do fim do vídeo:** comentário de uma palavra (muda a cada caso) + plaquinha DESCONFIA SEMPRE!
 
 ## Tema
 
@@ -38,19 +38,20 @@ desmonta o golpe peça por peça e mostra as **3 pistas** que denunciavam tudo, 
 
 ## Estilo da capa
 
-O golpe em uma frase curta e com alerta ("O ÁUDIO DA SUA MÃE PODE SER FALSO"), a detetive com cara de desconfiada e
-o objeto do golpe em destaque (celular, maquininha, boleto). Amarelo e preto, como faixa de alerta.
+Capa em série, igual em todos os casos: fundo amarelo com faixa preta de alerta, **duas linhas** de texto ("E SE O
+ÁUDIO DA SUA / MÃE FOR FALSO?") e a **detetive em choque** com o objeto do golpe (celular, maquininha, boleto). É também
+o 1º quadro do vídeo, com o rosto enchendo a tela. Sobe no campo Miniatura do YouTube Studio.
 
 ## Fechamento e chamada
 
-**Fechamento:** As 3 pistas em uma frase e a regra de ouro do caso ("desconfiou? desliga e liga você").
-**Chamada (CTA):** Encerre com "Qual golpe já tentaram em você?" e mostre a plaquinha "DESCONFIA\nSEMPRE!".
+**Fechamento:** A regra de ouro do caso em uma frase curta ("A voz até pode ser dela. O pedido, não.").
+**Chamada (CTA):** Um comentário de UMA palavra ligada ao caso ("Se você vai combinar a sua hoje, comenta COMBINADO") e
+a plaquinha "DESCONFIA\nSEMPRE!". Nada de pedir "segue" no meio do vídeo.
 
-## Hashtags (até 5)
+## Hashtags
 
-#Golpe #SegurançaDigital #Pix #WhatsApp #DesmontaGolpe
-
-Se fizer sentido, troque uma por uma hashtag do golpe do vídeo (#GolpeDoPix, #VozClonada).
+Nenhuma no título nem na descrição do YouTube (parâmetro do vídeo de referência, 24/11/2026). No TikTok e no
+Instagram, se quiser: #Golpe #SegurançaDigital #Pix #DesmontaGolpe.
 
 ## Bio nas redes
 
