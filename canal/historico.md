@@ -11,3 +11,4 @@
 - 24/11/2026 · canal · Pediu trocar a voz padrão pela "Voz feminina natural" das vozes dele na ElevenLabs → voz conferida na conta e salva como padrão no lugar da Bia.
 - 24/11/2026 · canal · Contou que o @desmontagolpe está livre no TikTok e no Instagram → @ confirmado em canal.md.
 - 24/11/2026 · voz-clonada · Pediu o roteiro do 1º caso (voz clonada por IA) → roteiro escrito (~1min05, congelamento na hora do Pix, 3 pistas, palavra de segurança). Aguardando opinião.
+- 24/11/2026 · voz-clonada · Mandou um vídeo de referência ("O Jeito Certo de Postar Shorts Feitos com IA") pros parâmetros, pediu a fala "Oi, filho. Preciso pagar uma conta. Me manda um Pix, é urgente?" e trocar o final (por fora/por dentro) → fala trocada, pista 2 virou "nome", final novo que pede pra mandar pra mãe e emenda com o começo; o vídeo de referência não abriu daqui (YouTube bloqueia a nuvem), pedi os pontos principais.

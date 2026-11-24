@@ -2,9 +2,11 @@
 
 **Canal:** Desmonta Golpe — @desmontagolpe. **Caso nº 1 (estreia).**
 
-**Etapa:** roteiro escrito em 24/11/2026, aguardando opinião do usuário.
+**Etapa:** roteiro refeito em 24/11/2026 (frase do áudio e final trocados a pedido do usuário). O vídeo de referência
+enviado ("O Jeito Certo de Postar Shorts Feitos com IA", youtube.com/watch?v=Lufd9aG1_VA) não abriu daqui: os
+parâmetros dele entram quando o usuário mandar os pontos principais. Aguardando opinião.
 
-**Duração prevista:** cerca de 1min05 (≈ 200 palavras a ~190 palavras/min).
+**Duração prevista:** cerca de 1 minuto (≈ 190 palavras a ~190 palavras/min).
 
 **Voz:** Voz feminina natural (ElevenLabs). **Formato:** 1080×1920, 60 fps, 3D arredondado, cozinha à noite.
 
@@ -17,7 +19,7 @@ tela são inventados.
 O áudio da sua mãe pedindo Pix pode ser falso?
 
 Dez da noite. Chega um áudio dela no celular.
-"Oi, meu amor. Perdi a bolsa. Me manda um Pix urgente?"
+"Oi, filho. Preciso pagar uma conta. Me manda um Pix, é urgente?"
 A voz é dela. O jeitinho de falar é dela.
 Aí você abre o app do banco e digita o valor...
 
@@ -27,7 +29,7 @@ Essa voz não é da sua mãe. É uma cópia feita por inteligência artificial.
 A IA copia igual papagaio: imita o som, mas não sabe nada da vida de vocês.
 
 Pista um: a **pressa**. É tudo urgente, pra você não ter tempo de pensar.
-Pista dois: a **conta**. O Pix vai pro nome de alguém que você nem conhece.
+Pista dois: o **nome**. O Pix vai pra alguém que você nem conhece.
 Pista três: você **não consegue ligar**. "Tô sem bateria, só manda."
 
 Então você desliga e liga você mesmo pro número de sempre dela.
@@ -35,10 +37,9 @@ Mas e se ela não atender?
 Então vocês combinam antes uma palavra que só a família sabe.
 Essa é a **palavra de segurança**. O papagaio não sabe.
 
-Por fora, é a voz da sua mãe.
-Por dentro, é pressa, uma conta estranha e três segundinhos de vídeo.
+A voz até pode ser dela. O pedido, não.
 Desconfiou? Desliga e liga você.
-Qual golpe já tentaram em você?
+E manda esse vídeo pra sua mãe, antes que o áudio chegue nela.
 
 ## Como o vídeo conta (frase por frase)
 
@@ -46,7 +47,7 @@ Qual golpe já tentaram em você?
 |---|---|---|
 | 1 | Gancho | Cozinha à noite, celular em cima da mesa acendendo. Texto grande: a pergunta. A detetive (moletom amarelo e preto) se inclina desconfiada pro celular |
 | 2 | Dez da noite... | Câmera aberta da cozinha, relógio na parede marcando 22h, o celular vibra. Notificação na tela: "Mãe 🎤 áudio (0:07)" |
-| 3 | "Oi, meu amor..." | Close na tela: balão de áudio tocando, ondinha de som mexendo. A legenda da fala aparece em itálico, como áudio |
+| 3 | "Oi, filho..." | Close na tela: balão de áudio tocando, ondinha de som mexendo. A legenda da fala aparece em itálico, como áudio |
 | 4 | A voz é dela... | Foto de perfil da "Mãe" (desenho simples, sem rosto real) com coraçãozinho; a detetive faz cara de "é ela mesmo" |
 | 5 | Você abre o app... | Tela vira um app de banco genérico: campo "Valor" digitando R$ 1.500, o dedo indo pro botão "Confirmar" |
 | 6 | **Para tudo!** | **Congelamento**: imagem para, tudo puxa pro vermelho, carimbo "PARA TUDO!". A detetive entra no quadro com uma lupa |
@@ -54,16 +55,15 @@ Qual golpe já tentaram em você?
 | 8 | Três segundos... | Um cartão de vídeo de rede social com cronômetro "0:03" é sugado por uma caixinha com engrenagens (a "máquina"); sai a ondinha copiada. Número grande: **3 s** |
 | 9 | Papagaio | Um papagaio cartoon pousa no ombro do boneco de som e repete "Pix urgente!"; balão com "?" quando aparece um álbum de família |
 | 10 | Pista 1: pressa | A detetive aponta com a lupa: ampulheta virando rápido, rótulo **PRESSA**, círculo vermelho |
-| 11 | Pista 2: conta | Tela de confirmação do Pix com o nome "J. S. P." destacado; rótulo **CONTA ESTRANHA** |
+| 11 | Pista 2: nome | Tela de confirmação do Pix com o nome "J. S. P." destacado; rótulo **NOME ESTRANHO** |
 | 12 | Pista 3: não liga | Ícone de bateria vazia e "Tô sem bateria, só manda" riscados; rótulo **NÃO DEIXA LIGAR** |
 | 13 | Então você desliga... | Botão vermelho de desligar; a tela mostra "Ligando para Mãe (número salvo)" |
 | 14 | E se não atender? | "Chamada não atendida"; a detetive coça a cabeça |
 | 15 | Combinam uma palavra | Um cadeado com "🔒 ******" desce sobre a mesa da cozinha; porta-retrato da família ao lado |
 | 16 | Palavra de segurança | Rótulo amarelo **PALAVRA DE SEGURANÇA**; o papagaio tenta e sai um "???", ele cai do poleiro (humor) |
-| 17 | Por fora | Volta a tela do áudio inteira, bonitinha |
-| 18 | Por dentro | A tela "desmonta" em 3 peças flutuando: ampulheta, cartão da conta estranha e o cartão "0:03" |
-| 19 | Desconfiou? | Placa grande: **DESCONFIOU? DESLIGA E LIGA VOCÊ** |
-| 20 | Chamada | A detetive olha pra câmera; plaquinha final **DESCONFIA SEMPRE!** |
+| 17 | A voz até pode ser dela... | A ondinha do áudio se divide: metade "voz" (verde, ✓) e metade "pedido" (vermelha, ✗) |
+| 18 | Desconfiou? | Placa grande: **DESCONFIOU? DESLIGA E LIGA VOCÊ** |
+| 19 | Manda pra sua mãe | A detetive aponta pra câmera e o celular da cozinha mostra "Encaminhar → Mãe ❤️"; o vídeo volta pro celular vibrando do começo (emenda com o gancho, pra quem assiste de novo); plaquinha **DESCONFIA SEMPRE!** |
 
 **Ritmo de videogame (falha → corrige):** a falha é o congelamento na frase 6 (o golpe "quase dá certo") e o "não
 atendeu" na 14; a correção é desligar e ligar (13) e a palavra de segurança (15–16).
