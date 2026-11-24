@@ -9,3 +9,5 @@
 - 24/11/2026 · canal · Aprovou o nome Desmonta Golpe, a detetive de moletom amarelo e preto e a cozinha à noite; pediu conferir o @ no TikTok e no Instagram; criou o repositório Desmonta-Golpe → projeto montado a partir da Fábrica Cartoon (motor, método e lições técnicas), canal configurado e 3 amostras de voz feminina baixadas pra escolher.
 - 24/11/2026 · canal · Escolheu a voz Bia (feminina, direta e segura) → adicionada à conta da ElevenLabs e salva como voz padrão do canal.
 - 24/11/2026 · canal · Pediu trocar a voz padrão pela "Voz feminina natural" das vozes dele na ElevenLabs → voz conferida na conta e salva como padrão no lugar da Bia.
+- 24/11/2026 · canal · Contou que o @desmontagolpe está livre no TikTok e no Instagram → @ confirmado em canal.md.
+- 24/11/2026 · voz-clonada · Pediu o roteiro do 1º caso (voz clonada por IA) → roteiro escrito (~1min05, congelamento na hora do Pix, 3 pistas, palavra de segurança). Aguardando opinião.

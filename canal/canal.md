@@ -4,7 +4,7 @@
 > A IA lê isso antes de escrever qualquer roteiro.
 
 **Nome do canal:** Desmonta Golpe
-**@ nas redes:** @desmontagolpe (conferir se está livre no TikTok, no Instagram e no YouTube antes de criar)
+**@ nas redes:** @desmontagolpe (livre no TikTok e no Instagram, conferido pelo usuário em 24/11/2026)
 **Assinatura do fim do vídeo:** Qual golpe já tentaram em você?
 
 ## Tema
