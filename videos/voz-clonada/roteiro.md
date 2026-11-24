@@ -24,10 +24,10 @@ a tela, já em choque**, olhando pro celular, com o título escrito em cima em d
 O áudio da sua mãe pedindo Pix pode ser falso?
 
 Dez da noite. Chega um áudio dela.
-"Oi, filho. Preciso pagar uma conta. Me manda um Pix, é urgente?"
+"Oi, filho. Preciso pagar uma conta. Me manda um Pix urgente?"
 A voz é dela. Você abre o app e digita o valor...
 
-**Para tudo!** Essa voz não é da sua mãe.
+**PARA TUDO!** Essa voz não é da sua mãe.
 É uma cópia feita por inteligência artificial. Às vezes bastam três segundos de um vídeo que ela postou.
 A IA imita o som igual papagaio, mas não sabe nada da vida de vocês.
 
@@ -52,7 +52,7 @@ Se você vai combinar a sua hoje, comenta **COMBINADO**.
 | 2 | Dez da noite... | Relógio da parede em 22h; notificação "Mãe 🎤 áudio (0:06)" |
 | 3 | "Oi, filho..." | Close na tela: balão de áudio tocando, ondinha mexendo, legenda em itálico |
 | 4 | A voz é dela... | Tela vira um app de banco genérico: "Valor R$ 1.500", o dedo descendo pro "Confirmar" |
-| 5 | **Para tudo!** | **Congelamento**: imagem para, tudo puxa pro vermelho, carimbo "PARA TUDO!". A detetive entra com a lupa |
+| 5 | **PARA TUDO!** | **Congelamento** com uma **leve tremida na tela** na hora do grito: imagem para, tudo puxa pro vermelho, carimbo "PARA TUDO!". A detetive entra com a lupa |
 | 6 | Cópia por IA / 3 segundos | Cartão de vídeo "0:03" é sugado por uma caixinha de engrenagens e sai a ondinha copiada. Número grande **3 s** |
 | 7 | Papagaio | Papagaio cartoon pousa e repete "Pix urgente!"; aparece um álbum de família e ele faz "?" |
 | 8 | Pista 1: pressa | Lupa na ampulheta girando rápido; rótulo **PRESSA** com círculo vermelho |
