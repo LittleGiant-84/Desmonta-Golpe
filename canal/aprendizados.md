@@ -35,7 +35,7 @@
 
 - Capa em série, igual em todos: fundo amarelo e preto, 2 linhas de texto e a detetive em choque; subir no campo Miniatura do YouTube Studio pelo computador (vídeo de referência, 24/11/2026).
 - Título até 50 caracteres, começando com "E se", quem e a ideia, com uma palavra em MAIÚSCULA; nenhuma hashtag no título (vídeo de referência, 24/11/2026).
-- Descrição curta (uma linha com o que a pessoa buscaria), sem hashtag e sem tags; preencher o vídeo relacionado quando houver um vídeo longo; marcar "sim" em uso de IA (voz realista feita com IA); programar sempre no mesmo horário (vídeo de referência, 24/11/2026).
+- Descrição curta (uma linha com o que a pessoa buscaria), sem hashtag e sem tags; preencher o vídeo relacionado quando houver um vídeo longo; marcar "sim" em uso de IA (voz realista feita com IA); programar sempre no mesmo horário: **12h** (vídeo de referência e escolha do usuário, 24/11/2026).
 
 ## O que dá resultado nas redes
 

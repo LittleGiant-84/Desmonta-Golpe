@@ -53,6 +53,10 @@ a plaquinha "DESCONFIA\nSEMPRE!". Nada de pedir "segue" no meio do vídeo.
 Nenhuma no título nem na descrição do YouTube (parâmetro do vídeo de referência, 24/11/2026). No TikTok e no
 Instagram, se quiser: #Golpe #SegurançaDigital #Pix #DesmontaGolpe.
 
+## Quando postar
+
+Todo dia que tiver vídeo, programado pra **12h** (sempre o mesmo horário; escolha do usuário em 24/11/2026).
+
 ## Bio nas redes
 
 🕵️‍♀️ A gente desmonta o golpe antes dele chegar em você. Um caso por vídeo.
