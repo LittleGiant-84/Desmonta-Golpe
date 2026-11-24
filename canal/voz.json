@@ -1,5 +1,9 @@
 {
-  "motor": "teste",
+  "motor": "elevenlabs",
+  "id": "Eyspt3SYhZzXd1Jd3J8O",
+  "modelo": "eleven_multilingual_v2",
+  "velocidade": 1.1,
+  "acelerar": "auto",
   "nomeTeste": "Microsoft Maria",
   "ritmoWindows": 1.22
 }

@@ -27,7 +27,7 @@
 
 ## Voz e som
 
-- (nada ainda)
+- Bia, da ElevenLabs, é a voz de todos os vídeos; voz do computador só para testes (você escolheu, 24/11/2026).
 
 ## Capa e texto de postar
 
