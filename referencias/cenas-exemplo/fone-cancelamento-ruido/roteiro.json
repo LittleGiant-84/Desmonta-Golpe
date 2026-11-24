@@ -1,0 +1,187 @@
+{
+  "titulo": "Como o fone faz silêncio?",
+  "capa": "COMO O FONE\nFAZ *SILÊNCIO*?",
+  "estilo": "redondo",
+  "fps": 60,
+  "efeitos": {
+    "abaixa": true
+  },
+  "personagem": {
+    "tipo": "menino",
+    "roupa": "moletom",
+    "cores": {
+      "moletom": "#2563eb",
+      "punho": "#f97316",
+      "calca": "#1e293b",
+      "mochila": "#2563eb",
+      "tenis": "#f4f1ea",
+      "cabelo": "#6b4226"
+    }
+  },
+  "lugar": "quintal",
+  "hora": "dia",
+  "voz": {
+    "motor": "elevenlabs",
+    "id": "u7N1p4OIOc6Fl7y72WE7",
+    "modelo": "eleven_multilingual_v2",
+    "velocidade": 1.1,
+    "acelerar": "auto"
+  },
+  "alvoPpm": 185,
+  "frases": [
+    {
+      "texto": "Como o fone faz silêncio?",
+      "plano": "gancho",
+      "gancho": true
+    },
+    {
+      "texto": "Se você entra num ônibus barulhento, parece que o motor sentou do seu lado.",
+      "plano": "embarcar"
+    },
+    {
+      "texto": "Você coloca o fone e aperta um botão. O ronco diminui.",
+      "plano": "ligar_anc"
+    },
+    {
+      "texto": "Mas o ônibus continua andando! O que aconteceu?",
+      "plano": "onibus_continua"
+    },
+    {
+      "texto": "Vamos montar esse truque.",
+      "plano": "abrir_esquema"
+    },
+    {
+      "texto": "Primeiro, você encaixa uma almofadinha em volta de cada ouvido.",
+      "plano": "almofadas"
+    },
+    {
+      "texto": "Ela funciona como uma janela fechada: segura parte do barulho.",
+      "plano": "comparar_janela"
+    },
+    {
+      "texto": "Esse é o isolamento.",
+      "plano": "isolamento_rotulo"
+    },
+    {
+      "texto": "Mas aquele ronco ainda passa!",
+      "plano": "ronco_passa"
+    },
+    {
+      "texto": "Então você adiciona pecinhas que escutam o som ao redor.",
+      "plano": "microfones"
+    },
+    {
+      "texto": "São os microfones.",
+      "plano": "microfones_rotulo"
+    },
+    {
+      "texto": "Só que escutar não resolve. Falta calcular uma resposta!",
+      "plano": "falta_calculo"
+    },
+    {
+      "texto": "Você conecta os microfones a um minicomputador.",
+      "plano": "encaixar_placa"
+    },
+    {
+      "texto": "Esse é o processador.",
+      "plano": "processador_rotulo"
+    },
+    {
+      "texto": "Ele calcula um sinal para fazer o movimento contrário ao ruído.",
+      "plano": "calcular_sinal"
+    },
+    {
+      "texto": "Mas um sinal elétrico sozinho não faz som!",
+      "plano": "falta_falante"
+    },
+    {
+      "texto": "Então você liga um pequeno alto-falante.",
+      "plano": "alto_falante"
+    },
+    {
+      "texto": "Ele vibra o ar e produz o som calculado.",
+      "plano": "vibrar_ar"
+    },
+    {
+      "texto": "Pera... você combate barulho com mais som?",
+      "plano": "mais_som"
+    },
+    {
+      "texto": "Sim! Som é uma variação de pressão no ar.",
+      "plano": "pressao"
+    },
+    {
+      "texto": "Pensa em dois empurrões contrários.",
+      "plano": "dois_empurroes"
+    },
+    {
+      "texto": "Quando um aumenta a pressão, o outro tenta diminuir.",
+      "plano": "opostos"
+    },
+    {
+      "texto": "Perto do ouvido, as duas variações se combinam.",
+      "plano": "combinar"
+    },
+    {
+      "texto": "A que sobra fica menor. Você escuta menos ruído!",
+      "plano": "residual"
+    },
+    {
+      "texto": "Esse é o cancelamento ativo.",
+      "plano": "cancelamento_rotulo"
+    },
+    {
+      "texto": "Mas a bateria acabou? A eletrônica para.",
+      "plano": "sem_bateria"
+    },
+    {
+      "texto": "As almofadas continuam segurando parte do barulho.",
+      "plano": "isolamento_permanece"
+    },
+    {
+      "texto": "Com a bateria carregada, o truque volta.",
+      "plano": "bateria_carregada"
+    },
+    {
+      "texto": "E não precisa tocar música pra funcionar.",
+      "plano": "sem_musica"
+    },
+    {
+      "texto": "Mas não vira silêncio absoluto!",
+      "plano": "limite"
+    },
+    {
+      "texto": "O ronco constante do motor é mais fácil de reduzir.",
+      "plano": "motor_constante",
+      "pausaDepois": 1.7
+    },
+    {
+      "texto": "Vozes e sons repentinos ainda podem aparecer.",
+      "plano": "voz_ainda_passa"
+    },
+    {
+      "texto": "É por isso que o fone deixa tudo mais quietinho, sem apagar o mundo.",
+      "plano": "quietinho"
+    },
+    {
+      "texto": "Por fora, é só um fone.",
+      "plano": "por_fora"
+    },
+    {
+      "texto": "Por dentro, almofadas, microfones e um processador comandando o alto-falante.",
+      "plano": "por_dentro"
+    },
+    {
+      "texto": "Qual aparelho a gente abre no próximo?",
+      "plano": "segue"
+    }
+  ],
+  "cauda": {
+    "segundos": 1.6,
+    "plano": "cartao"
+  },
+  "ambiente": {
+    "arquivo": "sons/ambiente.wav",
+    "ganho": 1
+  }
+}

@@ -1,0 +1,30 @@
+// Reutiliza exclusivamente a voz já salva e copia o vídeo sem recodificar imagens.
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),vm=require('vm'),{execFileSync}=require('child_process');
+const ff=require('ffmpeg-static'),fp=require('ffprobe-static').path,pasta=__dirname,raiz=path.resolve(pasta,'../..');
+const roteiro=JSON.parse(fs.readFileSync(path.join(pasta,'roteiro.json'),'utf8'));
+const tl=JSON.parse(fs.readFileSync(path.join(pasta,'timeline.json'),'utf8')),voz=roteiro.voz;
+const tmp=path.join(pasta,'testes','mix-sem-zumbido');fs.mkdirSync(tmp,{recursive:true});
+const run=args=>execFileSync(ff,['-y','-hide_banner','-loglevel','error',...args],{stdio:['ignore','ignore','inherit']});
+const duracao=arq=>Number(execFileSync(fp,['-v','error','-show_entries','format=duration','-of','csv=p=0',arq]).toString());
+const cfg={id:voz.id,modelo:voz.modelo||'eleven_multilingual_v2',estabilidade:voz.estabilidade??.45,similaridade:voz.similaridade??.8,estilo:voz.estilo??.25,velocidade:voz.velocidade??1.1};
+const offline=async texto=>{const hash=crypto.createHash('sha1').update(JSON.stringify([cfg,texto])).digest('hex').slice(0,16),mp3=path.join(pasta,'narracao',hash+'.mp3'),json=path.join(pasta,'narracao',hash+'.json');if(!fs.existsSync(mp3)||!fs.existsSync(json))throw Error('Fala ausente no cache; remix offline interrompido.');return {mp3,al:JSON.parse(fs.readFileSync(json,'utf8')),novo:false};};
+const src=fs.readFileSync(path.join(raiz,'motor/render.js'),'utf8');
+const tokens=s=>s.split(/\s+/).filter(Boolean).map(t=>({texto:t.replace(/\*/g,'').replace(/[.,!?;:]+$/,''),chave:false}));
+const ctx={fs,path,crypto,console,process,pasta,tmp,roteiro,voz,PAUSA:.1,SONS:path.join(raiz,'motor/sons'),limpo:s=>s.replace(/\*/g,''),tokens,duracao,ffmpeg:run,elevenlabs:offline};
+vm.createContext(ctx);
+vm.runInContext(src.slice(src.indexOf('async function narrarElevenlabs()'),src.indexOf('function montarTimeline(audios)')),ctx);
+vm.runInContext(src.slice(src.indexOf('const biblioteca ='),src.indexOf('const PAGINA =')),ctx);
+(async()=>{
+ execFileSync(process.execPath,[path.join(pasta,'gerar-ambiente.js')],{stdio:'inherit'});
+ const audios=await ctx.narrarElevenlabs();
+ for(let i=0;i<audios.length;i++)if(Math.abs(audios[i].dur-(tl.frases[i].fim-tl.frases[i].inicio))>.00001)throw Error('Duração da voz mudou.');
+ ctx.mixar(audios,tl,tl.sons||[],path.join(tmp,'narracao.wav'),path.join(tmp,'audio-limpo.wav'),null);
+ const original=path.join(pasta,'testes','previa-completa-com-yuri.mp4'),saida=path.join(pasta,'video.mp4');
+ if(fs.existsSync(saida))throw Error('Entrega já existe: preservar versão antes de substituir.');
+ run(['-i',original,'-i',path.join(tmp,'audio-limpo.wav'),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart','-t',String(tl.total),saida]);
+ const hash=arq=>execFileSync(ff,['-v','error','-i',arq,'-map','0:v:0','-c','copy','-f','hash','-hash','sha256','-']).toString().trim();
+ const antes=hash(original),depois=hash(saida);if(antes!==depois)throw Error('A imagem codificada foi alterada.');
+ run(['-v','error','-i',saida,'-f','null','-']);
+ const rel={arquivo:saida,videoIdentico:true,hashVideo:depois,duracao:duracao(saida),creditosNovos:0,ambiente:'somente comparação 75,512713–77,212713 s'};
+ fs.writeFileSync(path.join(pasta,'testes','conferencia-sem-zumbido.json'),JSON.stringify(rel,null,2));console.log(JSON.stringify(rel));
+})().catch(e=>{console.error(e.stack);process.exitCode=1});

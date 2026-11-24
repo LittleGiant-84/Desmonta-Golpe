@@ -1,0 +1,142 @@
+{
+  "inicio": "falta_calculo",
+  "fim": "mais_som",
+  "descricao": "Prévia da integração Problem Resolve, com laboratório e mecanismo do fone. Texto e Yuri reaproveitados do vídeo aprovado.",
+  "eventos": {
+    "placaStart": {
+      "plano": "encaixar_placa",
+      "palavra": "conecta"
+    },
+    "placaEnd": {
+      "plano": "encaixar_placa",
+      "fim": true
+    },
+    "sinalStart": {
+      "plano": "calcular_sinal"
+    },
+    "falanteStart": {
+      "plano": "alto_falante",
+      "palavra": "liga"
+    },
+    "falanteEnd": {
+      "plano": "alto_falante",
+      "palavra": "alto-falante",
+      "offset": 12
+    },
+    "vibra": {
+      "plano": "vibrar_ar",
+      "palavra": "vibra"
+    }
+  },
+  "animacoes": [
+    {
+      "target": "concha.abertura",
+      "inicio": 0,
+      "fim": 75,
+      "to": 1
+    },
+    {
+      "target": "chip.entrada",
+      "inicio": "placaStart",
+      "fim": "placaEnd",
+      "to": 1
+    },
+    {
+      "target": "sinal.ativo",
+      "inicio": "sinalStart",
+      "duracao": 24,
+      "to": 1
+    },
+    {
+      "target": "falante.entrada",
+      "inicio": "falanteStart",
+      "fim": "falanteEnd",
+      "to": 1
+    },
+    {
+      "target": "membrana.ativa",
+      "inicio": "vibra",
+      "duracao": 12,
+      "to": 1
+    }
+  ],
+  "indicadores": {
+    "falta_calculo": [
+      "FALTA CALCULAR A RESPOSTA",
+      "negative"
+    ],
+    "encaixar_placa": [
+      "CONECTA O PROCESSADOR",
+      "positive"
+    ],
+    "processador_rotulo": [
+      "ESSE É O PROCESSADOR",
+      "info"
+    ],
+    "calcular_sinal": [
+      "CALCULA O SINAL OPOSTO",
+      "info"
+    ],
+    "falta_falante": [
+      "FALTA TRANSFORMAR EM SOM",
+      "negative"
+    ],
+    "alto_falante": [
+      "ENTRA O ALTO-FALANTE",
+      "positive"
+    ],
+    "vibrar_ar": [
+      "MEMBRANA VIBRANDO",
+      "info"
+    ],
+    "mais_som": [
+      "MAIS SOM, MENOS RUÍDO?",
+      "warning"
+    ]
+  },
+  "camera": {
+    "de": {
+      "position": [
+        0.77,
+        1.95,
+        6.25
+      ],
+      "target": [
+        0.18,
+        1.07,
+        0.02
+      ]
+    },
+    "ate": {
+      "position": [
+        0.52,
+        1.87,
+        6.05
+      ],
+      "target": [
+        0.22,
+        1.11,
+        0.02
+      ]
+    }
+  },
+  "objetos": [
+    {
+      "id": "personagem",
+      "type": "apresentador-cartoon",
+      "visible": true
+    },
+    {
+      "id": "fone",
+      "type": "fone-em-corte",
+      "visible": true
+    }
+  ],
+  "palavrasChave": [
+    "processador",
+    "alto-falante",
+    "vibra",
+    "som"
+  ],
+  "audioOrigem": "video.mp4"
+}

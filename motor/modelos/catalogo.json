@@ -1,0 +1,25 @@
+{
+  "modelos": [
+    {
+      "id": "robo",
+      "arquivo": "motor/modelos/robot-expressive/RobotExpressive.glb",
+      "nome": "RobotExpressive",
+      "origem": "https://github.com/mrdoob/three.js/tree/r160/examples/models/gltf/RobotExpressive",
+      "autores": ["Tomás Laulhé", "Don McCurdy"],
+      "licenca": "CC0-1.0",
+      "animacoes": ["Dance", "Death", "Idle", "Jump", "No", "Punch", "Running", "Sitting", "Standing", "ThumbsUp", "Walking", "WalkJump", "Wave", "Yes"]
+    },
+    {
+      "id": "som",
+      "arquivo": "motor/modelos/boom-box/BoomBox.glb",
+      "nome": "Boom Box",
+      "origem": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/BoomBox",
+      "autores": ["Microsoft"],
+      "licenca": "CC0-1.0",
+      "animacoes": []
+    },
+    {"id": "placa", "arquivo": "motor/modelos/pecas-originais/placa.glb", "nome": "Placa eletrônica", "origem": "motor/pecas-e-personagens.js", "partes": ["Base", "Chip", "Conectores", "Trilhas"]},
+    {"id": "bateria", "arquivo": "motor/modelos/pecas-originais/bateria.glb", "nome": "Bateria com indicador de carga", "origem": "motor/pecas-e-personagens.js"},
+    {"id": "engrenagem", "arquivo": "motor/modelos/pecas-originais/engrenagem.glb", "nome": "Engrenagem", "origem": "motor/pecas-e-personagens.js"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "cameraContinua": true,
+  "gestos": true,
+  "interacoes": true,
+  "falaAnimada": true,
+  "intensidade": 0.8,
+  "referencia": "referencias/dinamica/guia.md"
+}

@@ -1,0 +1,123 @@
+{
+  "titulo": "Como o celular sabe onde você tocou?",
+  "capa": "COMO O CELULAR\nSABE ONDE\n*VOCÊ TOCOU*?",
+  "estilo": "redondo",
+  "fps": 60,
+  "efeitos": {
+    "abaixa": true
+  },
+  "personagem": {
+    "tipo": "menino",
+    "roupa": "moletom",
+    "cores": {
+      "moletom": "#2563eb",
+      "punho": "#f97316",
+      "calca": "#1e293b",
+      "mochila": "#2563eb",
+      "tenis": "#f4f1ea",
+      "cabelo": "#6b4226"
+    }
+  },
+  "lugar": "quintal",
+  "hora": "dia",
+  "voz": {
+    "motor": "elevenlabs",
+    "id": "u7N1p4OIOc6Fl7y72WE7",
+    "modelo": "eleven_multilingual_v2",
+    "velocidade": 1.1,
+    "acelerar": "auto"
+  },
+  "alvoPpm": 190,
+  "frases": [
+    {
+      "texto": "Como o celular sabe onde você tocou?",
+      "plano": "gancho",
+      "gancho": true
+    },
+    {
+      "texto": "Se você montar só a parte que mostra a imagem, dá pra ver o ícone.",
+      "plano": "imagem"
+    },
+    {
+      "texto": "Você toca. Nada. Seu celular virou um porta-retrato.",
+      "plano": "falha",
+      "jogo": "falha"
+    },
+    {
+      "texto": "Então você põe duas tiras condutoras sob o vidro.",
+      "plano": "duas_tiras",
+      "jogo": "conserta",
+      "rebobina": 0.6
+    },
+    {
+      "texto": "Uma manda um sinal. A outra capta parte dele.",
+      "plano": "pulso"
+    },
+    {
+      "texto": "Seu dedo muda quanto do sinal chega do outro lado.",
+      "plano": "toque"
+    },
+    {
+      "texto": "Esse é o *sensor capacitivo*.",
+      "plano": "sensor"
+    },
+    {
+      "texto": "Mas um par de tiras só vigia um cantinho.",
+      "plano": "canto",
+      "jogo": "falha"
+    },
+    {
+      "texto": "Então você cruza várias linhas e colunas pela tela.",
+      "plano": "montar_grade",
+      "jogo": "corrige"
+    },
+    {
+      "texto": "Pronto, uma *grade de sensores*.",
+      "plano": "grade"
+    },
+    {
+      "texto": "Pensa em batalha naval. Linha e coluna dão o endereço.",
+      "plano": "mapa"
+    },
+    {
+      "texto": "Mas alguém precisa conferir todos esses cruzamentos.",
+      "plano": "varredura"
+    },
+    {
+      "texto": "Então você liga a grade a um chip que varre os sinais.",
+      "plano": "encaixar_chip"
+    },
+    {
+      "texto": "O *controlador* compara os sinais e calcula onde você tocou.",
+      "plano": "controlador"
+    },
+    {
+      "texto": "Com dois dedos, ele acompanha duas áreas ao mesmo tempo.",
+      "plano": "dois_toques"
+    },
+    {
+      "texto": "É por isso que abrir os dedos aumenta a foto.",
+      "plano": "zoom"
+    },
+    {
+      "texto": "Por fora, é só o vidro e a imagem.",
+      "plano": "por_fora"
+    },
+    {
+      "texto": "Por dentro, o sensor em grade percebe o dedo e o chip acha o ponto.",
+      "plano": "por_dentro"
+    },
+    {
+      "texto": "Qual aparelho a gente abre no próximo?",
+      "plano": "segue"
+    }
+  ],
+  "cauda": {
+    "segundos": 1.6,
+    "plano": "cartao"
+  },
+  "trilha": {
+    "arquivo": "trilha",
+    "ganho": 0.18
+  }
+}

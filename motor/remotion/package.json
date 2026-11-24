@@ -1,0 +1,23 @@
+{
+  "name": "fabrica-cartoon-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Integração Problem Resolve ao motor Cartoon, com identidade e vozes em cache",
+  "scripts": {
+    "previa": "node render.js"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/bundler": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "@remotion/media": "4.0.543",
+    "@remotion/renderer": "4.0.543",
+    "@remotion/three": "4.0.543",
+    "raw-loader": "4.0.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.543",
+    "three": "0.160.0"
+  }
+}

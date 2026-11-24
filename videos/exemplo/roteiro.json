@@ -1,0 +1,29 @@
+{
+  "titulo": "Lanterna",
+  "capa": "COMO FUNCIONA\nUMA *LANTERNA*?",
+  "estilo": "redondo",
+  "fps": 60,
+  "voz": {"motor": "teste"},
+  "alvoPpm": 190,
+  "frases": [
+    {"texto": "Como uma pilha desse tamanho ilumina o quintal inteiro?", "plano": "gancho", "gancho": true},
+    {"texto": "Se você precisa achar a chave no quintal à noite, tateia o chão e tropeça no primeiro degrau.", "plano": "tropeca", "jogo": "falha"},
+    {"texto": "Então você pega uma lâmpada, que acende quando a eletricidade passa por dentro dela.", "plano": "lampada", "jogo": "conserta", "rebobina": 0.6},
+    {"texto": "Mas ela não acende sozinha.", "plano": "apagada", "jogo": "falha"},
+    {"texto": "Então você encaixa uma pilha, que empurra a eletricidade pelo fio até a lâmpada.", "plano": "pilha", "jogo": "corrige"},
+    {"texto": "Essa é a *pilha*.", "plano": "pilha_rotulo"},
+    {"texto": "Mas a luz se espalha pra todo lado e chega fraquinha onde você quer ver.", "plano": "fraca", "jogo": "falha"},
+    {"texto": "Então você põe atrás da lâmpada um espelho em forma de tigela, que joga toda a luz pra frente.", "plano": "refletor", "jogo": "corrige"},
+    {"texto": "Esse é o *refletor*.", "plano": "refletor_rotulo"},
+    {"texto": "Mas ligada o tempo todo, a pilha acaba em poucas horas.", "plano": "acabando", "jogo": "falha"},
+    {"texto": "Então você corta o caminho da eletricidade com uma pecinha que abre e fecha.", "plano": "botao", "jogo": "corrige"},
+    {"texto": "Esse é o *botão*.", "plano": "botao_rotulo"},
+    {"texto": "Aperta, o caminho fecha e a luz acende. Solta, ela apaga.", "plano": "aperta"},
+    {"texto": "Por fora, é só um tubo que acende.", "plano": "por_fora"},
+    {"texto": "Por dentro, é uma pilha empurrando eletricidade, um espelho em forma de tigela e um botão que abre e fecha o caminho.", "plano": "por_dentro"},
+    {"texto": "E segue o canal pra ver o próximo.", "plano": "segue"}
+  ],
+  "cauda": {"segundos": 1.6, "plano": "cartao"},
+  "trilha": {"arquivo": "trilha", "ganho": 0.22},
+  "efeitos": {"abaixa": true}
+}

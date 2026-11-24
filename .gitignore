@@ -1,0 +1,39 @@
+node_modules/
+.npm-cache/
+
+# Credenciais locais
+.env
+.env.*
+!.env.exemplo
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.netrc
+credentials.json
+secrets.json
+
+# Vídeos gerados ficam no computador
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+
+# Arquivos que o motor pode gerar novamente
+**/narracao/
+**/narracao.wav
+**/timeline.json
+**/previa-*.jpg
+**/testes/
+**/versoes/
+canal/testes-de-voz/
+canal/testes-perfil/
+
+*.log
+*.tmp
+.cache/
+.DS_Store
+Thumbs.db
+Desktop.ini
