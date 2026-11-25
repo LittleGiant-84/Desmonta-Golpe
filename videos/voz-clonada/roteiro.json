@@ -4,7 +4,7 @@
   "estilo": "redondo",
   "fps": 60,
   "efeitos": {"abaixa": true},
-  "personagem": {"tipo": "menina", "roupa": "sobretudo", "cores": {"sobretudo": "#eab308", "detalhe": "#111827", "fivela": "#fde68a", "sapato": "#111827", "cabeloMenina": "#1f1a17"}},
+  "personagem": {"tipo": "menina", "roupa": "sobretudo", "cores": {"sobretudo": "#eab308", "detalhe": "#111827", "fivela": "#fde68a", "sapato": "#111827", "calca": "#1f2937", "cabeloMenina": "#1f1a17"}},
   "lugar": "cozinha",
   "hora": "noite",
   "voz": {"motor": "elevenlabs", "id": "IYSWsktXvPfMJJ7GKBNY", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"},

@@ -5,8 +5,8 @@
 
 ## Personagem
 
-A detetive: menina de cabelo preto com **sobretudo de detetive amarelo** (capa de chuva) até o joelho, sem vestido
-por baixo: gola levantada e lapelas pretas, cinto preto com fivela dourada, botões pretos, mangas compridas com punho
+A detetive: menina de cabelo preto com **sobretudo de detetive amarelo** (capa de chuva) reto até o joelho, aberto na
+frente, com **calça escura** por baixo (sem vestido): gola levantada e lapelas pretas, cinto preto com fivela dourada, botões pretos, mangas compridas com punho
 preto e sapatos pretos. Sem boina. Usa lupa nas investigações. Diferente do menino azul e laranja do outro canal
 (O Mundo da Tecnologia). A roupa é a opção `"roupa": "sobretudo"` do motor (criada em 25/11/2026).
 
@@ -62,7 +62,7 @@ Coloque o logo do canal em `canal/logo.png` (quadrado). Ele aparece no fim de to
 "estilo": "redondo",
 "fps": 60,
 "efeitos": {"abaixa": true},
-"personagem": {"tipo": "menina", "roupa": "sobretudo", "cores": {"sobretudo": "#eab308", "detalhe": "#111827", "fivela": "#fde68a", "sapato": "#111827", "cabeloMenina": "#1f1a17"}},
+"personagem": {"tipo": "menina", "roupa": "sobretudo", "cores": {"sobretudo": "#eab308", "detalhe": "#111827", "fivela": "#fde68a", "sapato": "#111827", "calca": "#1f2937", "cabeloMenina": "#1f1a17"}},
 "lugar": "cozinha",
 "hora": "noite",
 "voz": {"motor": "elevenlabs", "id": "IYSWsktXvPfMJJ7GKBNY", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"}

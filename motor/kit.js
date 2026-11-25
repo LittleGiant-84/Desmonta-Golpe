@@ -2107,10 +2107,10 @@
       const quadril = new THREE.Group();
       quadril.position.set(lado * 0.09, 0.62, 0);
       const comp = menina ? 0.5 : 0.34;
-      const perna = moletom || (sobretudo && !menina)
+      const perna = moletom || sobretudo
         ? K.malha(new THREE.CylinderGeometry(moletom ? 0.1 : 0.075, moletom ? 0.085 : 0.07, 0.6, 8), K.mat(c.calca))
         : K.malha(K.redondo ? new THREE.CapsuleGeometry(0.062, comp - 0.06, 6, 20) : new THREE.CylinderGeometry(0.065, 0.06, comp, 7), pele);
-      perna.position.y = moletom || (sobretudo && !menina) ? -0.26 : -0.54 + comp / 2;
+      perna.position.y = moletom || sobretudo ? -0.26 : -0.54 + comp / 2;
       // Redondo: tênis de bico redondo (cápsula deitada e achatada) no lugar da caixa
       const geoTenis = K.redondo ? new THREE.CapsuleGeometry(0.075, 0.1, 8, 20).rotateX(Math.PI / 2).scale(1, 0.55, 1) : new THREE.BoxGeometry(0.15, 0.08, 0.24);
       const tenis = K.malha(geoTenis, K.mat(sobretudo ? c.sapato : menina || moletom ? c.tenisBranco : c.tenis));
@@ -2139,12 +2139,17 @@
     tronco.position.y = 0.8;
     corpo.add(tronco);
     if (sobretudo) {
-      // Aba do sobretudo até o joelho, aberta embaixo, com a costura da frente
+      // Aba do sobretudo até o joelho, reta e aberta na frente (aparece a calça), com as bordas da abertura
       const matDet = K.mat(c.detalhe);
-      const aba = K.malha(new THREE.CylinderGeometry(0.245, 0.39, 0.5, 24, 1, true), K.mat(corRoupa, { side: THREE.DoubleSide }));
-      aba.position.y = 0.56;
-      const costura = K.malha(new THREE.BoxGeometry(0.012, 0.46, 0.02), matDet);
-      costura.position.set(0.03, 0.55, 0.33); costura.rotation.x = -0.29;
+      const abre = 0.32;
+      const aba = K.malha(new THREE.CylinderGeometry(0.25, 0.31, 0.46, 28, 1, true, abre, Math.PI * 2 - abre * 2), K.mat(corRoupa, { side: THREE.DoubleSide }));
+      aba.position.y = 0.5;
+      const costura = new THREE.Group();
+      [-1, 1].forEach((lado) => {
+        const borda = K.malha(new THREE.BoxGeometry(0.03, 0.47, 0.02), matDet);
+        borda.position.set(lado * Math.sin(abre) * 0.28, 0.5, Math.cos(abre) * 0.28); borda.rotation.set(-0.13, lado * abre, 0);
+        costura.add(borda);
+      });
       // Gola levantada e lapelas em V
       const gola = K.malha(new THREE.TorusGeometry(0.12, 0.045, 10, 24), matDet);
       gola.rotation.x = Math.PI / 2; gola.position.set(0, 1.07, -0.01); gola.scale.set(1.05, 1, 1.6);
@@ -2160,10 +2165,10 @@
         });
       });
       // Cinto com fivela
-      const cinto = K.malha(new THREE.CylinderGeometry(0.288, 0.3, 0.065, 24), matDet);
+      const cinto = K.malha(new THREE.CylinderGeometry(0.262, 0.27, 0.06, 28), matDet);
       cinto.position.y = 0.66;
       const fivela = K.malha(new THREE.BoxGeometry(0.08, 0.07, 0.02), K.mat(c.fivela, { metalness: 0.6 }));
-      fivela.position.set(0, 0.66, 0.3);
+      fivela.position.set(0, 0.66, 0.272);
       corpo.add(cinto, fivela);
     }
     let mochila = null;
