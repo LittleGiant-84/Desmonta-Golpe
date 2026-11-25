@@ -18,3 +18,4 @@
 - 24/11/2026 · voz-clonada · Pediu pausa no meio da produção → roteiro.json e cena.js escritos (rascunho, ainda sem prévias), guardados no GitHub; aguardando ele mandar continuar.
 - 25/11/2026 · voz-clonada · Pediu pra continuar → testando a cena e gerando prévias com voz de teste.
 - 25/11/2026 · voz-clonada · Cena testada e prévias geradas com voz de teste (close da detetive com o título, celular gigante com as telas, PARA TUDO vermelho com tremida, papagaio, 3 pistas, cadeado, final com COMBINADO). Detetive ficou de vestido amarelo com boina preta (o motor não faz menina de moletom). Aguardando opinião antes do vídeo com a voz final.
+- 25/11/2026 · voz-clonada · Pediu uma roupa de detetive sem boina e o render no PC dele → boina tirada; sobretudo amarelo com gola e lapelas pretas, cinto com fivela, botões e mangas compridas, sapatos pretos (salvo como padrão do canal). O PC ainda não aparece pra esta conversa da nuvem: render fica pela conversa do PC.

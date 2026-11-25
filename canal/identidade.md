@@ -5,9 +5,11 @@
 
 ## Personagem
 
-A detetive: menina de **vestido amarelo**, cabelo preto e **boina preta de detetive**, com lupa nas investigações.
-Diferente do menino azul e laranja do outro canal (O Mundo da Tecnologia). (O motor só faz menina de vestido; o
-moletom é só pro menino. A boina é feita no `cena.js` de cada vídeo, presa na cabeça.)
+A detetive: menina de cabelo preto com **sobretudo de detetive amarelo** (capa de chuva): gola levantada e lapelas
+pretas, cinto preto com fivela dourada, botões pretos, mangas compridas com punho preto e sapatos pretos. Sem boina.
+Usa lupa nas investigações. Diferente do menino azul e laranja do outro canal (O Mundo da Tecnologia).
+Como fazer: o motor só desenha menina de vestido, então o vestido fica preto (`vestido: #111827`) e o sobretudo é
+montado no `cena.js` por cima do corpo (copiar o bloco "Sobretudo de detetive" de `videos/voz-clonada/cena.js`).
 
 Nas cenas com interação, usar `K.apresentador` para orientar o olhar, apontar para as pistas e segurar o celular,
 o boleto ou a maquininha. Modelos externos em `referencias/modelos-e-personagens.md`.
@@ -60,7 +62,7 @@ Coloque o logo do canal em `canal/logo.png` (quadrado). Ele aparece no fim de to
 "estilo": "redondo",
 "fps": 60,
 "efeitos": {"abaixa": true},
-"personagem": {"tipo": "menina", "roupa": "moletom", "cores": {"vestido": "#facc15", "cabeloMenina": "#1f1a17", "moletom": "#facc15", "punho": "#111827", "calca": "#111827", "mochila": "#facc15", "tenis": "#f4f1ea", "cabelo": "#1f1a17"}},
+"personagem": {"tipo": "menina", "roupa": "moletom", "cores": {"vestido": "#111827", "cabeloMenina": "#1f1a17", "tenisBranco": "#111827", "moletom": "#facc15", "punho": "#111827", "calca": "#111827", "mochila": "#facc15", "tenis": "#f4f1ea", "cabelo": "#1f1a17"}},
 "lugar": "cozinha",
 "hora": "noite",
 "voz": {"motor": "elevenlabs", "id": "IYSWsktXvPfMJJ7GKBNY", "modelo": "eleven_multilingual_v2", "velocidade": 1.1, "acelerar": "auto"}
