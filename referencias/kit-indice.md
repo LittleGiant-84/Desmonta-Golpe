@@ -124,7 +124,7 @@ Animação adicional em `motor/animacao.js` (guia: `referencias/animacao-e-camer
 - `K.modelo(id, op)` em `motor/pecas-e-personagens.js`: instancia um GLB declarado no roteiro. `em` toca ou combina clipes por tempo absoluto.
 - `K.placaEletronica(op)`, `K.bateria(op)` e `K.engrenagem(op)` em `motor/pecas-e-personagens.js`: peças com componentes e controles reutilizáveis.
 
-- `K.boneco(op = {})` (linha 2077): op.tipo: 'menino' (padrão, mascote) | 'menina' (vestido vermelho) op.roupa: 'moletom' = roupa do mascote (moletom amarelo com capuz, mochila, calça azul-noite, tênis branco)
+- `K.boneco(op = {})` (linha 2077): op.tipo: 'menino' (padrão, mascote) | 'menina' (vestido vermelho) op.roupa: 'moletom' = roupa do mascote (moletom amarelo com capuz, mochila, calça azul-noite, tênis branco) | 'sobretudo' = capa de chuva de detetive (menino ou menina, sem vestido), com gola, lapelas, cinto, fivela, botões e mangas; cores `sobretudo`, `detalhe`, `fivela`, `sapato`
   - boneco: `b.humor(h)` (linha 2277): humor: 'feliz' | 'triste' | 'surpreso' | 'bravo' | 'nojo' | 'assustado'
   - boneco: `b.pose(esq, dir)` (linha 2291): pose: braços como { x, z, c } por lado (-1 = esquerda da tela quando de frente, 1 = direita)
   - boneco: `b.pernasEm(e, d)` (linha 2297)

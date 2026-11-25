@@ -2086,11 +2086,16 @@
 
   // op.tipo: 'menino' (padrão, mascote) | 'menina' (vestido vermelho)
   // op.roupa: 'moletom' = roupa do mascote (moletom amarelo com capuz, mochila, calça azul-noite, tênis branco)
+  //          'sobretudo' = capa de chuva de detetive, pra menino ou menina, sem vestido por baixo: sobretudo até o
+  //          joelho com gola levantada, lapelas, cinto com fivela, botões e mangas compridas. Cores: sobretudo,
+  //          detalhe (gola, lapelas, cinto, botões e punhos), fivela e sapato
   K.boneco = function (op = {}) {
+    const sobretudo = op.roupa === 'sobretudo';
     const menina = op.tipo === 'menina';
+    const vestido = menina && !sobretudo;
     const moletom = !menina && op.roupa === 'moletom';
-    const c = Object.assign({}, K.cores, op.cores || {});
-    const corRoupa = menina ? c.vestido : moletom ? c.moletom : c.camiseta;
+    const c = Object.assign({ sobretudo: 0xeab308, detalhe: 0x111827, fivela: 0xfde68a, sapato: 0x111827 }, K.cores, op.cores || {});
+    const corRoupa = sobretudo ? c.sobretudo : menina ? c.vestido : moletom ? c.moletom : c.camiseta;
     const matRoupa = K.mat(corRoupa);
     const corCabelo = menina ? c.cabeloMenina : c.cabelo;
     const g = new THREE.Group();
@@ -2102,20 +2107,20 @@
       const quadril = new THREE.Group();
       quadril.position.set(lado * 0.09, 0.62, 0);
       const comp = menina ? 0.5 : 0.34;
-      const perna = moletom
-        ? K.malha(new THREE.CylinderGeometry(0.1, 0.085, 0.6, 8), K.mat(c.calca))
+      const perna = moletom || (sobretudo && !menina)
+        ? K.malha(new THREE.CylinderGeometry(moletom ? 0.1 : 0.075, moletom ? 0.085 : 0.07, 0.6, 8), K.mat(c.calca))
         : K.malha(K.redondo ? new THREE.CapsuleGeometry(0.062, comp - 0.06, 6, 20) : new THREE.CylinderGeometry(0.065, 0.06, comp, 7), pele);
-      perna.position.y = moletom ? -0.26 : -0.54 + comp / 2;
+      perna.position.y = moletom || (sobretudo && !menina) ? -0.26 : -0.54 + comp / 2;
       // Redondo: tênis de bico redondo (cápsula deitada e achatada) no lugar da caixa
       const geoTenis = K.redondo ? new THREE.CapsuleGeometry(0.075, 0.1, 8, 20).rotateX(Math.PI / 2).scale(1, 0.55, 1) : new THREE.BoxGeometry(0.15, 0.08, 0.24);
-      const tenis = K.malha(geoTenis, K.mat(menina || moletom ? c.tenisBranco : c.tenis));
+      const tenis = K.malha(geoTenis, K.mat(sobretudo ? c.sapato : menina || moletom ? c.tenisBranco : c.tenis));
       tenis.position.set(0, K.redondo ? -0.565 : -0.58, 0.03);
       quadril.add(perna, tenis);
       if (moletom) {
         const sola = K.malha(K.redondo ? new THREE.CapsuleGeometry(0.08, 0.1, 6, 20).rotateX(Math.PI / 2).scale(1, 0.2, 1) : new THREE.BoxGeometry(0.16, 0.03, 0.25), K.mat(c.sola));
         sola.position.set(0, K.redondo ? -0.6 : -0.615, 0.03);
         quadril.add(sola);
-      } else if (!menina) {
+      } else if (!menina && !sobretudo) {
         const bermuda = K.malha(new THREE.CylinderGeometry(0.11, 0.1, 0.24, 8), K.mat(c.bermuda));
         bermuda.position.set(lado * 0.005, -0.12, 0);
         quadril.add(bermuda);
@@ -2123,16 +2128,44 @@
       corpo.add(quadril);
       return { quadril, lado };
     });
-    if (menina) {
+    if (vestido) {
       const saia = K.malha(new THREE.CylinderGeometry(0.2, 0.36, 0.44, 12), K.mat(corRoupa));
       saia.position.y = 0.56;
       corpo.add(saia);
     }
 
-    const tronco = K.malha(new THREE.SphereGeometry(0.26, 10, 8), matRoupa);
+    const tronco = K.malha(new THREE.SphereGeometry(0.26, sobretudo ? 24 : 10, sobretudo ? 16 : 8), matRoupa);
     tronco.scale.set(menina ? 0.9 : 1, 1.25, 0.85);
     tronco.position.y = 0.8;
     corpo.add(tronco);
+    if (sobretudo) {
+      // Aba do sobretudo até o joelho, aberta embaixo, com a costura da frente
+      const matDet = K.mat(c.detalhe);
+      const aba = K.malha(new THREE.CylinderGeometry(0.245, 0.39, 0.5, 24, 1, true), K.mat(corRoupa, { side: THREE.DoubleSide }));
+      aba.position.y = 0.56;
+      const costura = K.malha(new THREE.BoxGeometry(0.012, 0.46, 0.02), matDet);
+      costura.position.set(0.03, 0.55, 0.33); costura.rotation.x = -0.29;
+      // Gola levantada e lapelas em V
+      const gola = K.malha(new THREE.TorusGeometry(0.12, 0.045, 10, 24), matDet);
+      gola.rotation.x = Math.PI / 2; gola.position.set(0, 1.07, -0.01); gola.scale.set(1.05, 1, 1.6);
+      corpo.add(aba, costura, gola);
+      [-1, 1].forEach((lado) => {
+        const lapela = K.malha(new THREE.BoxGeometry(0.075, 0.24, 0.02), matDet);
+        lapela.position.set(lado * 0.065, 0.93, 0.215); lapela.rotation.set(-0.35, 0, lado * 0.38);
+        corpo.add(lapela);
+        [0.8, 0.7].forEach((y) => {
+          const botao = K.malha(new THREE.SphereGeometry(0.018, 12, 8), matDet);
+          botao.position.set(lado * 0.075, y, 0.228 - (0.8 - y) * 0.05);
+          corpo.add(botao);
+        });
+      });
+      // Cinto com fivela
+      const cinto = K.malha(new THREE.CylinderGeometry(0.288, 0.3, 0.065, 24), matDet);
+      cinto.position.y = 0.66;
+      const fivela = K.malha(new THREE.BoxGeometry(0.08, 0.07, 0.02), K.mat(c.fivela, { metalness: 0.6 }));
+      fivela.position.set(0, 0.66, 0.3);
+      corpo.add(cinto, fivela);
+    }
     let mochila = null;
     if (moletom) {
       // Capuz caído nas costas, cordinhas, bolso canguru e mochila com alças
@@ -2169,7 +2202,7 @@
       const ombro = new THREE.Group();
       ombro.position.set(lado * (menina ? 0.24 : 0.27), 1.0, 0);
       const manga = K.malha(new THREE.SphereGeometry(K.redondo ? 0.082 : 0.1, 8, 6), matRoupa);
-      const matBraco = moletom ? matRoupa : pele, gr = moletom ? 1.45 : 1;
+      const matBraco = moletom || sobretudo ? matRoupa : pele, gr = moletom ? 1.45 : sobretudo ? 1.3 : 1;
       // Redondo: braço e antebraço em cápsula (o cotovelo dobra sem emenda) e mão de luva com polegar
       const sup = K.malha(K.redondo ? new THREE.CapsuleGeometry(0.044 * gr, 0.3 - 0.088 * gr, 6, 20) : new THREE.CylinderGeometry(0.045 * gr, 0.042 * gr, 0.26, 6), matBraco);
       sup.position.y = -0.15;
@@ -2186,8 +2219,8 @@
         mao.add(polegar);
       }
       cotovelo.add(ant, mao);
-      if (moletom) {
-        const punho = K.malha(new THREE.CylinderGeometry(0.066, 0.066, 0.05, 7), K.mat(c.punho));
+      if (moletom || sobretudo) {
+        const punho = K.malha(new THREE.CylinderGeometry(sobretudo ? 0.06 : 0.066, sobretudo ? 0.06 : 0.066, 0.05, sobretudo ? 16 : 7), K.mat(sobretudo ? c.detalhe : c.punho));
         punho.position.y = -0.2;
         cotovelo.add(punho);
       }

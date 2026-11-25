@@ -337,23 +337,6 @@
     const coresP = Object.fromEntries(Object.entries(id.cores).map(([k, c]) => [k, new THREE.Color(c).getHex()]));
     det = K.apresentador({ tipo: id.tipo, roupa: id.roupa, cores: coresP });
     det.g.position.set(...POS); det.g.rotation.y = YAW; det.reset(0); det.g.updateMatrixWorld(true);
-    // Sobretudo de detetive (capa de chuva): amarelo, gola levantada e lapelas pretas, cinto com fivela, botões e mangas
-    const COR_CAPA = 0xeab308, matCapa = K.mat(COR_CAPA), matPreto = K.mat(PRETO);
-    const capaCorpo = K.malha(new THREE.SphereGeometry(0.262, 24, 16), matCapa); capaCorpo.scale.set(0.95, 1.27, 0.92); capaCorpo.position.y = 0.8; det.corpo.add(capaCorpo);
-    const capaSaia = K.malha(new THREE.CylinderGeometry(0.245, 0.39, 0.5, 24, 1, true), K.mat(COR_CAPA, { side: THREE.DoubleSide })); capaSaia.position.y = 0.56; det.corpo.add(capaSaia);
-    const abertura = K.malha(new THREE.BoxGeometry(0.012, 0.46, 0.02), matPreto); abertura.position.set(0.02, 0.55, 0.33); abertura.rotation.x = -0.29; det.corpo.add(abertura);
-    const gola = K.malha(new THREE.TorusGeometry(0.12, 0.045, 10, 24), matPreto); gola.rotation.x = Math.PI / 2; gola.position.set(0, 1.07, -0.01); gola.scale.set(1.05, 1, 1.6); det.corpo.add(gola);
-    [-1, 1].forEach((lado) => {
-      const lapela = K.malha(new THREE.BoxGeometry(0.075, 0.24, 0.02), matPreto); lapela.position.set(lado * 0.065, 0.93, 0.205); lapela.rotation.set(-0.35, 0, lado * 0.38); det.corpo.add(lapela);
-      [0.8, 0.7].forEach((y) => bola(det.corpo, 0.018, [lado * 0.075, y, 0.228 - (0.8 - y) * 0.05], PRETO));
-    });
-    const cinto = K.malha(new THREE.CylinderGeometry(0.288, 0.3, 0.065, 24), matPreto); cinto.position.y = 0.66; det.corpo.add(cinto);
-    const fivela = K.malha(new THREE.BoxGeometry(0.08, 0.07, 0.02), K.mat(0xfde68a, { metalness: 0.6 })); fivela.position.set(0, 0.66, 0.3); det.corpo.add(fivela);
-    det.bracos.forEach((b) => {
-      const mSup = K.malha(new THREE.CapsuleGeometry(0.058, 0.17, 6, 16), matCapa); mSup.position.y = -0.13; b.ombro.add(mSup);
-      const mAnt = K.malha(new THREE.CapsuleGeometry(0.054, 0.12, 6, 16), matCapa); mAnt.position.y = -0.09; b.cotovelo.add(mAnt);
-      const punhoC = K.malha(new THREE.CylinderGeometry(0.062, 0.062, 0.04, 16), matPreto); punhoC.position.y = -0.17; b.cotovelo.add(punhoC);
-    });
     ROSTO = det.cabeca.getWorldPosition(new THREE.Vector3()).toArray();
 
     plaquinha = K.plaquinha('DESCONFIA\nSEMPRE!'); plaquinha.position.set(1.3, 0, 0.75); plaquinha.rotation.y = -0.35; plaquinha.scale.setScalar(0.62);
