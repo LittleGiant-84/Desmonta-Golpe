@@ -16,3 +16,5 @@
 - 24/11/2026 · voz-clonada · Revisou o texto: "Me manda um Pix urgente?" (sem vírgula) e "PARA TUDO!" com leve tremida na tela → ajustado no roteiro.
 - 24/11/2026 · voz-clonada · Aprovou o roteiro ("segue") e escolheu postar sempre às 12h → horário salvo no canal; começando roteiro.json e cena.js.
 - 24/11/2026 · voz-clonada · Pediu pausa no meio da produção → roteiro.json e cena.js escritos (rascunho, ainda sem prévias), guardados no GitHub; aguardando ele mandar continuar.
+- 25/11/2026 · voz-clonada · Pediu pra continuar → testando a cena e gerando prévias com voz de teste.
+- 25/11/2026 · voz-clonada · Cena testada e prévias geradas com voz de teste (close da detetive com o título, celular gigante com as telas, PARA TUDO vermelho com tremida, papagaio, 3 pistas, cadeado, final com COMBINADO). Detetive ficou de vestido amarelo com boina preta (o motor não faz menina de moletom). Aguardando opinião antes do vídeo com a voz final.

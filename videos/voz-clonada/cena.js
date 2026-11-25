@@ -5,10 +5,10 @@
 // Tudo é função do tempo da cena (tc); a câmera usa o tempo real (t).
 (function () {
   const AMARELO = 0xfacc15, PRETO = 0x111827, VERMELHO = 0xef4444, VERDE = 0x22c55e;
-  const POS = [-0.55, 0, 0.55], YAW = 0.45;              // lugar da detetive
+  const POS = [-0.45, 0, 0.8], YAW = 0.45;              // lugar da detetive
   const MESA = [0.45, 0, 0.0];                           // mesa da cozinha
   const TOPO = 0.78;                                     // altura do tampo
-  const FONE = [0.45, 1.86, -0.45];                      // centro do celular gigante
+  const FONE = [0.42, 1.92, -0.6];                      // centro do celular gigante
   const MAQ = [0.12, TOPO, 0.08];                        // maquininha que copia a voz
 
   let tl, bl, det, percurso, focos = [], ROSTO;
@@ -197,16 +197,18 @@
     bl.forEach((b, i) => { if (I[b.plano] == null) I[b.plano] = i; });
 
     // Cozinha: piso, paredes, janela com a noite, relógio, armários, geladeira e luminária
-    const piso = caixa(K.scene, [7, 0.04, 6], [0, -0.02, -0.2], 0xd6c3a1);
-    const pisoTex = canvasPlano(K.scene, 7, 6, 700, (c, w, h) => {
+    const piso = caixa(K.scene, [7, 0.04, 9], [0, -0.02, 1.3], 0xd6c3a1);
+    const pisoTex = canvasPlano(K.scene, 7, 9, 700, (c, w, h) => {
       c.fillStyle = '#e4d5b7'; c.fillRect(0, 0, w, h);
-      c.fillStyle = '#cdb48c'; for (let x = 0; x < 14; x++) for (let y = 0; y < 12; y++) if ((x + y) % 2) c.fillRect(x * w / 14, y * h / 12, w / 14, h / 12);
+      c.fillStyle = '#cdb48c'; for (let x = 0; x < 14; x++) for (let y = 0; y < 18; y++) if ((x + y) % 2) c.fillRect(x * w / 14, y * h / 18, w / 14, h / 18);
     });
-    pisoTex.m.rotation.x = -Math.PI / 2; pisoTex.m.position.set(0, 0.002, -0.2); pisoTex.m.receiveShadow = true;
+    pisoTex.m.rotation.x = -Math.PI / 2; pisoTex.m.position.set(0, 0.002, 1.3); pisoTex.m.receiveShadow = true;
     piso.visible = true;
     caixa(K.scene, [7, 3.2, 0.1], [0, 1.6, -2.3], 0x7aa2b8);
-    caixa(K.scene, [0.1, 3.2, 6], [-3.2, 1.6, -0.2], 0x6b93a8);
-    caixa(K.scene, [0.1, 3.2, 6], [3.2, 1.6, -0.2], 0x6b93a8);
+    caixa(K.scene, [0.1, 3.2, 9], [-3.2, 1.6, 1.3], 0x6b93a8);
+    caixa(K.scene, [0.1, 3.2, 9], [3.2, 1.6, 1.3], 0x6b93a8);
+    caixa(K.scene, [6.5, 0.08, 9], [0, 3.2, 1.3], 0xe8eef2);
+    caixa(K.scene, [6.5, 0.12, 0.1], [0, 3.1, -2.22], 0xf4f1ea);
     caixa(K.scene, [7, 0.12, 0.12], [0, 0.06, -2.22], 0xf4f1ea);
     // janela
     const jan = grupo(); jan.position.set(-1.45, 1.85, -2.24);
@@ -247,18 +249,14 @@
     caixa(cadeira, [0.45, 0.05, 0.45], [0, 0.46, 0], 0x8a5a32); caixa(cadeira, [0.45, 0.5, 0.05], [0, 0.72, -0.2], 0x8a5a32);
     [[-0.19, -0.19], [0.19, -0.19], [-0.19, 0.19], [0.19, 0.19]].forEach(([x, z]) => caixa(cadeira, [0.04, 0.46, 0.04], [x, 0.23, z], 0x6b4423));
     // luminária e luz da cozinha
-    const lum = grupo(); lum.position.set(MESA[0], 0, MESA[2]);
-    caixa(lum, [0.01, 0.9, 0.01], [0, 2.75, 0], 0x111827);
-    const cupula = K.malha(new THREE.ConeGeometry(0.26, 0.2, 28, 1, true), K.mat(AMARELO, { side: THREE.DoubleSide })); cupula.position.y = 2.25; lum.add(cupula);
-    bola(lum, 0.07, [0, 2.17, 0], 0xfff7d6, { emissive: 0xfff2c0, emissiveIntensity: 1.2 });
     luzMesa = new THREE.PointLight(0xffe2b0, 2.2, 7, 1.2); luzMesa.position.set(MESA[0], 2.1, MESA[2] + 0.4); K.scene.add(luzMesa);
     luzFone = new THREE.PointLight(0xbfe3ff, 0.9, 2.5, 1.5); K.scene.add(luzFone);
 
     // Celular gigante (a tela do caso)
     fone = grupo(); fone.position.set(...FONE); fone.rotation.y = -0.12;
-    caixa(fone, [0.86, 1.58, 0.06], [0, 0, 0], 0x1f2937, { roughness: 0.35 });
-    caixa(fone, [0.18, 0.025, 0.02], [0, 0.73, 0.035], 0x0b0f17);
-    telaFone = K.telaCanvas(0.78, 1.46, 480); telaFone.m.position.z = 0.032; fone.add(telaFone.m);
+    caixa(fone, [1.0, 1.84, 0.06], [0, 0, 0], 0x1f2937, { roughness: 0.35 });
+    caixa(fone, [0.2, 0.025, 0.02], [0, 0.86, 0.035], 0x0b0f17);
+    telaFone = K.telaCanvas(0.91, 1.7, 480); telaFone.m.position.z = 0.032; fone.add(telaFone.m);
     // Celular de verdade (na mão)
     celular = grupo();
     caixa(celular, [0.09, 0.17, 0.012], [0, 0, 0], 0x1f2937);
@@ -275,7 +273,7 @@
     caixa(maquina, [0.38, 0.3, 0.3], [0, 0.15, 0], 0x334155);
     caixa(maquina, [0.2, 0.03, 0.06], [0, 0.31, 0], PRETO);
     caixa(maquina, [0.05, 0.05, 0.02], [0.13, 0.25, 0.155], VERMELHO, { emissive: VERMELHO, emissiveIntensity: 0.6 });
-    [[-0.08, 0.13, 0.1], [0.09, 0.11, 0.075]].forEach(([x, y, r]) => { const e = K.engrenagem({ raio: r, cor: 0xfbbf24 }); e.position.set(x, y, 0.165); maquina.add(e); engr.push(e); });
+    [[-0.08, 0.13, 0.1], [0.09, 0.11, 0.075]].forEach(([x, y, r]) => { const e = K.engrenagem({ raio: r, cor: 0xfbbf24 }).g; e.position.set(x, y, 0.165); maquina.add(e); engr.push(e); });
     cartao = grupo();
     caixa(cartao, [0.3, 0.52, 0.015], [0, 0, 0], 0x111827);
     telaCartao = canvasPlano(cartao, 0.27, 0.48, 200, (c, w, h) => {
@@ -339,6 +337,11 @@
     const coresP = Object.fromEntries(Object.entries(id.cores).map(([k, c]) => [k, new THREE.Color(c).getHex()]));
     det = K.apresentador({ tipo: id.tipo, roupa: id.roupa, cores: coresP });
     det.g.position.set(...POS); det.g.rotation.y = YAW; det.reset(0); det.g.updateMatrixWorld(true);
+    // Boina preta de detetive
+    const boina = grupo(det.cabeca);
+    const topoB = K.malha(new THREE.SphereGeometry(0.2, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), K.mat(PRETO)); topoB.scale.set(1.15, 0.45, 1.15); boina.add(topoB);
+    const aba = K.malha(new THREE.CylinderGeometry(0.11, 0.11, 0.02, 20), K.mat(PRETO)); aba.position.set(0, 0.0, 0.17); aba.scale.set(1.3, 1, 0.8); boina.add(aba);
+    boina.position.set(0, 0.17, -0.01); boina.rotation.z = -0.12;
     ROSTO = det.cabeca.getWorldPosition(new THREE.Vector3()).toArray();
 
     plaquinha = K.plaquinha('DESCONFIA\nSEMPRE!'); plaquinha.position.set(1.3, 0, 0.75); plaquinha.rotation.y = -0.35; plaquinha.scale.setScalar(0.62);
@@ -364,7 +367,7 @@
 
     percurso = K.cameraContinua(chavesCamera());
     const css = document.createElement('style');
-    css.textContent = '.cena-golpe .capa-titulo{top:240px;font-size:88px;line-height:1.04}.cena-golpe .rotulo{font-size:62px;text-align:center}.cena-golpe .etiqueta{font-size:32px}';
+    css.textContent = '.cena-golpe .capa-titulo{top:240px;font-size:74px;line-height:1.08;left:30px;right:30px}.cena-golpe .rotulo{font-size:62px;text-align:center}.cena-golpe .etiqueta{font-size:32px}';
     document.head.appendChild(css); K.palco.classList.add('cena-golpe');
   }
 
@@ -372,11 +375,11 @@
   function chavesCamera() {
     const rosto = v(ROSTO), frente = v([Math.sin(YAW) * 0.55, 0, 1]).normalize();
     const P = {
-      perto: { pos: rosto.clone().addScaledVector(frente, 0.95).add(v([0.05, 0.04, 0])).toArray(), alvo: rosto.clone().add(v([0.05, -0.04, 0])).toArray(), fov: 38, foco: null },
-      aberto: { pos: [0.0, 1.5, 3.6], alvo: [0.05, 1.3, -0.2], fov: 44, foco: [[-0.85, 0, 0.3], [0.9, 2.66, -0.45]] },
-      tela: { pos: [0.25, 1.75, 2.6], alvo: [0.3, 1.55, -0.3], fov: 42, foco: [[-0.8, 0.9, 0.5], [0.9, 2.66, -0.45]] },
-      mesa: { pos: [0.05, 1.4, 2.7], alvo: [0.2, 1.05, -0.05], fov: 42, foco: [[-0.85, 0, 0.5], [0.95, 1.4, -0.3]] },
-      final: { pos: [0.25, 1.4, 3.6], alvo: [0.3, 1.2, 0.0], fov: 44, foco: [[-0.85, 0, 0.3], [1.75, 2.66, 0.9]] }
+      perto: { pos: rosto.clone().addScaledVector(frente, 1.5).add(v([0.08, 0.06, 0])).toArray(), alvo: rosto.clone().add(v([0.06, 0.06, 0])).toArray(), fov: 38, foco: null },
+      aberto: { pos: [0.05, 1.5, 3.2], alvo: [0.1, 1.4, -0.3], fov: 44, foco: [[-0.6, 0.0, 0.2], [0.95, 2.84, -0.6]], det: 1, pe: 0 },
+      tela: { pos: [0.35, 1.9, 2.2], alvo: [0.4, 1.85, -0.6], fov: 42, foco: [[-0.1, 1.0, -0.6], [0.93, 2.84, -0.6]], det: 0, pe: 1.0 },
+      mesa: { pos: [0.0, 1.45, 2.4], alvo: [0.2, 1.15, -0.1], fov: 42, foco: [[-0.5, 0.75, 0.4], [0.95, 1.5, -0.3]], det: 1, pe: 0.55 },
+      final: { pos: [0.3, 1.5, 3.3], alvo: [0.35, 1.35, -0.1], fov: 44, foco: [[-0.6, 0.0, 0.2], [1.6, 2.84, 0.9]], det: 1, pe: 0 }
     };
     const plano = [
       ['gancho', 'perto', 0], ['gancho', 'perto', 0.9], ['noite', 'aberto', 0.4], ['audio', 'tela', 0.5], ['app', 'tela', 1.0],
@@ -401,7 +404,10 @@
     const fa = a.foco || b.foco, fb = b.foco || a.foco;
     if (!fa) return null;
     const p = S((t - a.t) / (b.t - a.t));
-    return [0, 1].map((k) => fa[k].map((x, j) => K.lerp(x, fb[k][j], p)));
+    const caixaF = [0, 1].map((k) => fa[k].map((x, j) => K.lerp(x, fb[k][j], p)));
+    caixaF.det = K.lerp(a.det ?? b.det ?? 1, b.det ?? a.det ?? 1, p);
+    caixaF.pe = K.lerp(a.pe ?? b.pe ?? 0, b.pe ?? a.pe ?? 0, p);
+    return caixaF;
   }
 
   // ---------- Gestos ----------
@@ -559,7 +565,7 @@
     // --- Ampulheta (pista 1) ---
     ampulheta.visible = n === 'pista1';
     ampulheta.position.set(0.78, TOPO, 0.2);
-    ampulheta.scale.setScalar(Math.max(0.01, S(B.t / 0.35)) * 1.15);
+    ampulheta.scale.setScalar(Math.max(0.01, S(B.t / 0.35)) * 1.7);
     ampulheta.rotation.z = n === 'pista1' ? Math.floor(B.t / 0.7) * Math.PI + S((B.t % 0.7) / 0.25) * Math.PI : 0;
     ampulheta.position.y = TOPO + (n === 'pista1' ? 0.2 * Math.abs(Math.sin(ampulheta.rotation.z)) : 0);
     if (n === 'pista1') for (let k = 0; k < 4; k++) K.som('madeira', B.inicio + 0.25 + k * 0.7, 0.2);
@@ -594,10 +600,11 @@
     const fc = capa ? null : focoEm(t);
     if (fc) {
       const pts = [];
-      for (const x of [-0.42, 0.42]) for (const y of [0, 1.62]) for (const z of [-0.3, 0.4]) pts.push(det.g.localToWorld(v([x, y, z])).toArray());
+      const centroF = v([(fc[0][0] + fc[1][0]) / 2, (fc[0][1] + fc[1][1]) / 2, (fc[0][2] + fc[1][2]) / 2]);
+      for (const x of [-0.42, 0.42]) for (const y of [fc.pe * 1.2, 1.62]) for (const z of [-0.3, 0.4]) pts.push(centroF.clone().lerp(det.g.localToWorld(v([x, y, z])), fc.det).toArray());
       for (const x of [fc[0][0], fc[1][0]]) for (const y of [fc[0][1], fc[1][1]]) for (const z of [fc[0][2], fc[1][2]]) pts.push([x, y, z]);
       const antes = K.camera.position.clone();
-      K.enquadrarSeguro(pts, cam.alvo, { area: [48, 430, 1032, 1660] });
+      K.enquadrarSeguro(pts, cam.alvo, { area: [48, 520, 1032, 1700] });
       const w = I.noite != null ? faixa(t, T('noite') - 0.1, T('noite') + 0.9) : 1;
       if (w < 1) { K.camera.position.lerp(antes, 1 - w); K.camera.lookAt(v(cam.alvo)); }
     }
@@ -607,19 +614,18 @@
     const tela = (y) => ({ tela: [540, y] });
     if (n === 'audio' && B.p > 0.75) et.voz.em(tela(560), B.t - B.dur * 0.75);
     if (n === 'copia') et.copia.em(tela(560), B.t - 0.4);
-    if (n === 'tres_seg' && tq > 2.0) cont.em('3 s', tela(600), tq - 2.0, 'DE VÍDEO');
+    if (n === 'tres_seg' && tq > 2.0) cont.em('3 s', tela(500), tq - 2.0, 'DE VÍDEO');
     if (n === 'papagaio') { if (B.p < 0.5) et.pix.em(tela(560), B.t - 0.9); else et.vida.em(tela(560), B.t - B.dur * 0.5); }
-    if (n === 'pista1') { cont.em('1', tela(560), B.t - 0.05, 'PISTA'); et.pressa.em(tela(760), B.t - 0.8); circulo.em([0.78, TOPO + 0.2, 0.2], 170, B.t - 0.9); }
-    if (n === 'pista2') { cont.em('2', tela(560), B.t - 0.05, 'PISTA'); et.nome.em(tela(760), B.t - 0.8); }
-    if (n === 'pista3') { cont.em('3', tela(560), B.t - 0.05, 'PISTA'); et.liga.em(tela(760), B.t - 0.9); }
+    if (n === 'pista1') { cont.em('1', tela(450), B.t - 0.05, 'PISTA'); et.pressa.em(tela(585), B.t - 0.8); circulo.em([0.78, TOPO + 0.3, 0.2], 230, B.t - 0.9); }
+    if (n === 'pista2') { cont.em('2', tela(450), B.t - 0.05, 'PISTA'); et.nome.em(tela(585), B.t - 0.8); }
+    if (n === 'pista3') { cont.em('3', tela(450), B.t - 0.05, 'PISTA'); et.liga.em(tela(585), B.t - 0.9); }
     if (n === 'liga' && B.p > 0.3) et.ligue.em(tela(560), B.t - B.dur * 0.3);
     if (n === 'nao_atende') et.naoAtende.em(tela(560), B.t - 0.5);
     if (n === 'palavra' && B.t > 1.3) et.familia.em(tela(560), B.t - 1.3);
     if (n === 'palavra_rotulo') {
       const qp = K.quando('papagaio', B.inicio) ?? B.inicio + B.dur * 0.55;
-      if (tc < qp) rot.palavra.em(tela(600), B.t - 0.05); else et.naoSabe.em(tela(560), tc - qp);
+      if (tc < qp) rot.palavra.em(tela(530), B.t - 0.05); else et.naoSabe.em(tela(560), tc - qp);
     }
-    if (capa) circulo.em(celular.position.toArray(), 150, 1);
 
     estado = { n, modo };
   }
